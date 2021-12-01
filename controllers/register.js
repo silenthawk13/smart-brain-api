@@ -21,6 +21,7 @@ const handleRegister = (req, res, db, bcrypt) => {
             joined: new Date(),
           })
           .then((user) => {
+            console.log(err);
             res.json(user[0]);
           });
       })
@@ -32,3 +33,6 @@ const handleRegister = (req, res, db, bcrypt) => {
 module.exports = {
   handleRegister: handleRegister,
 };
+
+
+
